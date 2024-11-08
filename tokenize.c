@@ -9,7 +9,7 @@ int main() {
     fptr = fopen("CommentsMay2017.csv", "r");
 
     if (fptr == NULL) {
-        printf("File could not be opened\n");
+        perror("File could not be opened\n");
         return 1;
     }
 
