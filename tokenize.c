@@ -38,6 +38,11 @@ int main() {
         return 1;
     }
 
+    char line[1500];
+
+    while (fgets(line, sizeof(line), fptr) != NULL) {
+        // Remove the newline character at the end of the line, if present
+        line[strcspn(line, "\n")] = '\0';
 
 
     return 0;
