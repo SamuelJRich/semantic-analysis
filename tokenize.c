@@ -16,6 +16,13 @@ void parse_csv_line(char *line) {
             *p = '\0';  // End of field
             field_count++;
 
+            if(field_count == 2) {
+                printf("Comment body -- %s\n", field_start);
+                return;
+            }
+
+            field_start = p + 1;
+
         }
     }
 }
