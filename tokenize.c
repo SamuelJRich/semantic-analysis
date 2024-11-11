@@ -8,6 +8,16 @@ void parse_csv_line(char *line) {
     bool in_quotes = false;
     char *field_start = line;
     int field_count = 0;
+
+        for (char *p = line; *p; p++) {
+        if (*p == '"') {
+            in_quotes = !in_quotes;  // Toggle quote mode
+        } else if (*p == ',' && !in_quotes) {
+            *p = '\0';  // End of field
+            field_count++;
+
+        }
+    }
 }
 
 int main() {
