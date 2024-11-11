@@ -44,6 +44,11 @@ int main() {
         // Remove the newline character at the end of the line, if present
         line[strcspn(line, "\n")] = '\0';
 
+        // Parse and print each field in the line
+        parse_csv_line(line);
+    }
+
+    fclose(fptr);
 
     return 0;
 }
