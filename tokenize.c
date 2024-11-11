@@ -4,6 +4,12 @@
 
 FILE *fptr;
 
+void parse_csv_line(char *line) {
+    bool in_quotes = false;
+    char *field_start = line;
+    int field_count = 0;
+}
+
 int main() {
 
     // Opens the file in read mode.
